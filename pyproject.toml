@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meme-inbox"
+version = "0.2.0"
+description = "自动把聊天里的图判成表情包并入库，按情绪/场合挑着用"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+meme-ingest = "meme_inbox.ingest:main"
+meme-pick = "meme_inbox.pick:main"
+
+[tool.setuptools]
+packages = ["meme_inbox"]
